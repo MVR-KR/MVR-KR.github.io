@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Giffy-TFT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="alert hidden">
+        <p>isi text apa saja</p>
+    </div>
+    <div class="logo">
+        <img src="logo.png" alt="" srcset="">
+    </div>
+    <div class="menu hidden ">
+        <div class="box-menu" onclick="showmatrix()">
+            <div class="box-img" id="menu-matrix">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" data-attribution="cc0-icons"
+                    viewBox="0 0 24 24">
+                    <path
+                        d="M19.778 13.5H4.222A2.222 2.222 0 0 0 2 15.722v3.556c0 1.227.995 2.222 2.222 2.222h15.556A2.222 2.222 0 0 0 22 19.278v-3.556a2.222 2.222 0 0 0-2.222-2.222Zm0-11H4.222A2.222 2.222 0 0 0 2 4.722v3.556c0 1.227.995 2.222 2.222 2.222h15.556A2.222 2.222 0 0 0 22 8.278V4.722A2.222 2.222 0 0 0 19.778 2.5Z" />
+                    <path fill="#000" d="M6.5 7a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm0 11a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z" />
+                </svg>
+
+            </div>
+        </div>
+        <div class="box-menu">
+            <div class="box-img" id="start-recognition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" data-attribution="cc0-icons"
+                    viewBox="0 0 24 24">
+                    <path d="M22 2 10.5 13.5M22 2l-7.5 20-4-8.5-8.5-4L22 2Z" />
+                </svg>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="matrix menu-form hidden">
+        <div class="form">
+            <div class="x" onclick="offmenu();">x</div>
+            <div class="content">
+                <div class="judul-content">
+                    <h3>MATRIX</h3>
+                </div>
+                <div class="isi">
+
+                    <div class="sub">
+                        <h5>ANIMATION WELCOME</h5>
+                        <select id="welcome-select" class="input-select">
+                            <option value="W1">Welcome 1</option>
+                            <option value="W2">Welcome 2</option>
+                            <!-- Tambahkan opsi REM lainnya sesuai kebutuhan -->
+                        </select>
+                    </div>
+                    <div class="sub">
+                        <h5>SPEED MATRIX</h5>
+                        <input name="speed" style="width: 80%;" id="speed" type="range" step="5" min="10" max="30">
+                    </div>
+                    <div class="auto">
+                        <h5>ANIMATION MATRIX</h5>
+                        <div class="togle-auto">
+                            <label class="toggle-switch toggles input-auto">
+                                <input id="animation0" type="checkbox" name="auto" value="0">
+                                <span class="slider"></span>
+                            </label>
+                            Auto
+
+                        </div>
+
+                    </div>
+                    <div id="toggle-container" ></div>
+
+                </div>
+                <div class="save-content savematrix" onclick="savematrix()">
+                    <h3>SAVE</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="setting menu-form hidden">
+        <div class="form">
+            <div class="x" onclick="offmenu();">x</div>
+            <div class="judul-content">
+                <h3>SETTING</h3>
+            </div>
+        </div>
+    </div>
+    <div class="connect" onclick="connect()">
+        <img src="button.png" alt="" srcset="">
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

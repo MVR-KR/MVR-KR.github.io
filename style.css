@@ -1,0 +1,238 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  max-height: 2000px;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.connect {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 50%;
+  top: 68%;
+  margin-left: -120px;
+  margin-top: -120px;
+}
+
+.connect img {
+  width: 100%;
+}
+
+.connect:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+.menu {
+  width: 80%;
+  height: 240px;
+  background-color: transparent;
+  position: absolute;
+  left:10%;
+  top: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-form{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left:0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.judul-content{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.save-content{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+}
+.sub{
+  margin: 10px;
+  height: 60px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-select{
+  width: 100%;
+  border-radius: 5px;
+}
+.togle-auto{
+  margin-right: 19%;
+}
+.auto{
+  margin: 10px;
+  height: -50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grup-toggle{
+  width: 80%;
+  margin: 10px;
+  margin-left: 10%;
+  height: 20px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.isi{
+  width: 100%;
+  background-color: transparent;
+}
+.box-menu{
+  
+  width: 30%;
+  height:  30%;
+  background-color: transparent;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+}
+
+
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  margin-left: -150px;
+  margin-top: -150px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 300px;
+}
+.x{
+  position: absolute;
+  top: 0%;
+  left: 94%;
+  font-size: 200%;
+  font-weight: bold;
+  color: black;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.form{
+  width:100%;
+  height:100%;
+  max-width: 350px;
+  max-height: 500px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  background-color: white;
+}
+.alert {
+  background-color: greenyellow;
+  position: absolute;
+  top: 1%;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: medium;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.togle{
+  display: flex;
+  align-items: center;
+}
+    /* CSS untuk toggle switch */
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 17px;
+      
+    }
+
+    .toggle-switch input {
+      display: none;
+      
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 17px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked+.slider {
+      background-color: #272838;
+    }
+
+    input:focus+.slider {
+      box-shadow: 0 0 1px #272838;
+    }
+
+    input:checked+.slider:before {
+      -webkit-transform: translateX(13px);
+      -ms-transform: translateX(13px);
+      transform: translateX(13px);
+    }
