@@ -140,9 +140,8 @@ body {
   max-width: 300px;
 }
 .x{
-  position: absolute;
-  top: 0%;
-  left: 94%;
+  margin-top: -9px;
+  margin-left: 2px;
   font-size: 200%;
   font-weight: bold;
   color: black;
