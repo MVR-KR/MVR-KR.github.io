@@ -1,4 +1,4 @@
-let totalGIF = 44;
+let totalGIF = 91;
 let device;
 let tft;
 let success = "#D1E7DD";
@@ -6,11 +6,11 @@ let failed = "#F8D7DA";
 let warning = "#FFF3CD";
 let uuidService = "dee13011-14d8-4e12-94af-a6edfeaa1af9";
 let uuidChar = "dee13012-14d8-4e12-94af-a6edfeaa1af9";
-let timerA=0;
+let timerA = 0;
 function showAlert(color, text) {
-    
+
     var alertDiv = document.querySelector('.alert');
-    timerA=timerA+3000;
+    timerA = timerA + 3000;
     alertDiv.classList.remove('hidden');
     alertDiv.style.backgroundColor = color;
     alertDiv.querySelector('p').innerText = text;
@@ -124,20 +124,35 @@ if ('webkitSpeechRecognition' in window) {
 
         let valuevr = finalTranscript.toUpperCase();
         console.log(valuevr);
-        
-        const wordstoon = ["MENYALA", "START","ON","NYALA","GAS","PARTY"];
-        const wordstooff = ["OF","STOP", "MATI","BERHENTI","NONAKTIF"];
+
+        const wordstoon = ["MENYALA", "START", "ON", "NYALA", "GAS", "PARTY","MUSIK"];
+        const wordstooff = ["OF", "STOP", "MATI", "BERHENTI", "NONAKTIF"];
+        const wordstokiw = ["GENIT", "CEWE", "CANTIK","NGOPI","KOPI"];
+        const wordstotambah = ["TAMBAH"];
+        const wordstokurang = ["KURANG"];
         // Memeriksa apakah terdapat kata "MENYALA" di dalam valuevr
-        if (valuevr.includes(wordstoon[0])||valuevr.includes(wordstoon[1])||valuevr.includes(wordstoon[2])||valuevr.includes(wordstoon[3])||valuevr.includes(wordstoon[4])||valuevr.includes(wordstoon[5])) {
+        if (valuevr.includes(wordstokiw[0]) || valuevr.includes(wordstokiw[1]) || valuevr.includes(wordstokiw[2]) || valuevr.includes(wordstokiw[3]) || valuevr.includes(wordstokiw[4])) {
+            console.log('KIW');
+            kirim("KIW");
+            showAlert(success, 'Perintah Suara Diterima');
+        }else if (valuevr.includes(wordstotambah[0])){
+            console.log('TAMBAH');
+            kirim("TAMBAH");
+            showAlert(success, 'Perintah Suara Diterima');
+        }else if (valuevr.includes(wordstokurang[0])){
+            console.log('KURANG');
+            kirim("KURANG");
+            showAlert(success, 'Perintah Suara Diterima');
+        }else if (valuevr.includes(wordstoon[0]) || valuevr.includes(wordstoon[1]) || valuevr.includes(wordstoon[2]) || valuevr.includes(wordstoon[3]) || valuevr.includes(wordstoon[4]) || valuevr.includes(wordstoon[5])|| valuevr.includes(wordstoon[6])) {
             console.log('on');
             kirim("ON");
             showAlert(success, 'Perintah Suara Diterima');
-        }else if (valuevr.includes(wordstooff[0])||valuevr.includes(wordstooff[1])||valuevr.includes(wordstooff[2])||valuevr.includes(wordstooff[3])||valuevr.includes(wordstooff[4])) {
+        } else if (valuevr.includes(wordstooff[0]) || valuevr.includes(wordstooff[1]) || valuevr.includes(wordstooff[2]) || valuevr.includes(wordstooff[3]) || valuevr.includes(wordstooff[4])) {
             console.log('off');
             kirim("OFF");
             showAlert(success, 'Perintah Suara Diterima');
-        }
-         else {
+        } 
+        else {
             console.log('FALSE');
             showAlert(failed, 'Perintah Suara Tidak Dikenali');
         }
